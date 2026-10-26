@@ -1,0 +1,10 @@
+node_modules/
+out/
+_tmp/
+preview/
+export/
+# Ảnh thành viên Khối Hoàng Anh và nhạc TikTok: chỉ để trên máy Dũng, không đưa lên GitHub công khai
+public/assets/*
+!public/assets/README.md
+public/audio/*
+!public/audio/README.md

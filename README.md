@@ -111,3 +111,7 @@ Some creators shared only part of their prompt, or only described the result in 
 Every video and prompt belongs to its creator, linked from each entry. Previews are short clips hosted for this list. If you are a creator and want an entry changed or removed, open an issue.
 
 Browse the full collection with original and remake side by side at **[skillry.dev/ai-videos/opus-5-5](https://skillry.dev/ai-videos/opus-5-5?utm_source=github&utm_medium=readme&utm_campaign=awesome-opus5-5-videos)**.
+
+## Dự án dựng video của Hoàng Dũng
+
+- [`projects/thien-khoi-hoang-anh`](projects/thien-khoi-hoang-anh/) – Video Motion Graphics 9:16 (31 s) về kinh tế Việt Nam / TP.HCM, Thiên Khôi Group và hành trình Khối Hoàng Anh 2024–2026, dựng bằng Claude + Remotion với nhà 3D đất sét viết bằng code. Kịch bản và nguồn số liệu: [`KICH_BAN.md`](projects/thien-khoi-hoang-anh/KICH_BAN.md).

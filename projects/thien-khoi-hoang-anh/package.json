@@ -1,0 +1,47 @@
+{
+  "name": "thien-khoi-hoang-anh-mg",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video Motion Graphics 9:16 – Thiên Khôi Group × Khối Hoàng Anh (Hoàng Dũng), dựng bằng Remotion + 3D đất sét",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.8.2",
+    "@remotion/bundler": "4.0.536",
+    "@remotion/captions": "4.0.536",
+    "@remotion/cli": "4.0.536",
+    "@remotion/effects": "4.0.536",
+    "@remotion/media": "4.0.536",
+    "@remotion/renderer": "4.0.536",
+    "@remotion/three": "4.0.536",
+    "@remotion/transitions": "4.0.536",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.536",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.536",
+    "@types/react": "19.2.7",
+    "@types/three": "0.186.0",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "studio": "remotion studio",
+    "kiem-tra": "tsc --noEmit",
+    "xem-truoc": "remotion render ThienKhoi-HoangAnh-9x16 preview/HDRE_ThienKhoi-HoangAnh_9x16_PREVIEW_v01.mp4 --codec=h264 --crf=22 --scale=0.6667",
+    "xuat-ban": "remotion render ThienKhoi-HoangAnh-9x16 _tmp/master.mp4 --codec=h265 --crf=19",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}
