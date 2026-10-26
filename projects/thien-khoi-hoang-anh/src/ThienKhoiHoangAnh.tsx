@@ -18,7 +18,7 @@ import { MGSoChay } from "./mg/tk/MGSoChay";
 import { MGCta, MGTheTacGia } from "./mg/tk/MGTacGiaCta";
 import { MGVong } from "./mg/tk/MGVong";
 import { NenBayPhoHCM, NenCotGDP, NenNhaPhoTacGia, NenNhaPhoXay, NenThanhPhoDem, NenThanhPhoMoc } from "./scenes/Backgrounds3D";
-import { CanhHanhTrinh } from "./scenes/CanhHanhTrinh";
+import { CanhPhatTrienKhoi } from "./scenes/CanhPhatTrienKhoi";
 
 // Video MG 9:16 – "Kinh tế tăng tốc → TP.HCM → Thiên Khôi Group → Khối Hoàng Anh → Hoàng Dũng".
 // 30 fps, 930 khung = 31,0 s, khớp bài nhạc TikTok Dũng gửi (117,5 BPM; lặng 11,5–14,4 s; drop 14,4 s).
@@ -75,22 +75,27 @@ export const ThienKhoiHoangAnh = () => {
           <NenThanhPhoDem />
         </TransitionSeries.Sequence>
         <TransitionSeries.Transition presentation={iris({ width: 1080, height: 1920 })} timing={linearTiming({ durationInFrames: 12 })} />
-        <TransitionSeries.Sequence name="C6 Khối Hoàng Anh – Hành trình" durationInFrames={183}>
-          <CanhHanhTrinh
-            n1Year="2024"
-            n1Text="Phòng Hoàng Anh ra đời"
-            n2Year="16.10.2025"
-            n2Text="Phòng Hoàng Anh tròn 1 tuổi"
-            n3Year="2026"
-            n3Title="KHỐI HOÀNG ANH"
-            n3Sub1="Khối Hoàng Anh Hồ Chí Minh"
-            n3Sub2="Giám đốc Khối: Bà Đặng Thu Hương"
-            photoA="assets/phong-hoang-anh-1-tuoi.jpg"
-            photoB="assets/phong-hoang-anh-1-tuoi-2.jpg"
-            photoC="assets/khoi-hoang-anh-giam-doc-khoi.jpg"
-            n1At={22}
-            n2At={68}
-            n3At={114}
+        <TransitionSeries.Sequence name="C6 Khối Hoàng Anh – Biểu đồ phát triển (2D)" durationInFrames={183}>
+          <CanhPhatTrienKhoi
+            tieuDeNho="HÀNH TRÌNH PHÁT TRIỂN 2024 – 2026"
+            tieuDe="HOÀNG ANH"
+            moc1="2024"
+            moTa1="Phòng Hoàng Anh ra đời"
+            moc2="16.10.2025"
+            moTa2="Phòng Hoàng Anh tròn 1 tuổi"
+            moc3="2026"
+            moTa3="NÂNG CẤP THÀNH KHỐI"
+            phu3a="Khối Hoàng Anh Hồ Chí Minh"
+            phu3b="Giám đốc Khối: Bà Đặng Thu Hương"
+            nhanTruc={["2024", "16.10.2025", "2026"]}
+            anh2="assets/phong-hoang-anh-1-tuoi.jpg"
+            anh2b="assets/phong-hoang-anh-1-tuoi-2.jpg"
+            anh3="assets/khoi-hoang-anh-giam-doc-khoi.jpg"
+            soLieu={[0, 0, 0]}
+            donVi="thành viên"
+            at1={22}
+            at2={68}
+            at3={114}
           />
         </TransitionSeries.Sequence>
         <TransitionSeries.Transition presentation={wipe({ direction: "from-bottom" })} timing={linearTiming({ durationInFrames: 12 })} />

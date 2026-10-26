@@ -28,7 +28,7 @@ Mọi điểm cắt cảnh và chữ chính đặt đúng phách đo được (l
 | C3 TP.HCM | 233–357 | 7,8–11,9 | Bay thấp dọc phố về toà tháp, ghim vàng rơi | "TP. HỒ CHÍ MINH" → vòng **≈ 1/4 GDP cả nước** → "**GRDP 2025 TĂNG 8,03%**" | Fade mềm (0,47 s) + twirl |
 | C4 Lặng | 343–432 | 11,4–14,4 | Dãy nhà phố, căn giữa mọc lên từ mặt đất | *"Thị trường càng lớn, càng cần người dẫn đường giỏi."* (gõ chữ) + riser | Light leak trên điểm cắt (drop) + boom |
 | C5 Thiên Khôi | 432–602 | 14,4–20,1 | Thành phố đêm, dải kính sáng vàng | **THIÊN KHÔI GROUP** (đập nhịp) → 2020 thành lập · 7 chi nhánh · 31 trụ sở · **40.000+** → dấu **TOP 5 VARS AWARDS 2026** | Iris tròn (0,4 s) + whoosh |
-| C6 Khối Hoàng Anh | 590–773 | 19,7–25,8 | Nền navy + lưới vàng phối cảnh, thẻ ảnh 3D | Dòng thời gian: **2024** Phòng Hoàng Anh ra đời → **16.10.2025** tròn 1 tuổi (ảnh) → **2026 KHỐI HOÀNG ANH** (ảnh Giám đốc Khối) | Wipe từ dưới (0,4 s) + whoosh |
+| C6 Khối Hoàng Anh | 590–773 | 19,7–25,8 | **Biểu đồ phát triển 2D (motion graphics, không 3D)**: nền navy chấm vàng; 3 cột trồi đúng mốc, đường tăng trưởng vàng vẽ dần + mũi tên, biểu tượng nét Phòng → 2 căn → cụm tháp "Khối", nhà phố nét vàng tự vẽ ở mốc 2024, ảnh thật ở mốc 2 và 3 | **2024** Phòng Hoàng Anh ra đời → **16.10.2025** Phòng Hoàng Anh tròn 1 tuổi (ảnh) → **2026 NÂNG CẤP THÀNH KHỐI** · Khối Hoàng Anh Hồ Chí Minh · Giám đốc Khối: Bà Đặng Thu Hương (ảnh) | Wipe từ dưới (0,4 s) + whoosh |
 | C7 Tác giả + CTA | 761–930 | 25,4–31,0 | Dãy nhà phố giờ xanh | Thẻ chân dung **HOÀNG DŨNG** · Môi giới nhà phố TP.HCM · Khối Hoàng Anh – Thiên Khôi Group → "Anh chị cần mua – bán nhà phố TP.HCM?" → **NHẮN TIN NGAY** (đập theo phách) | — |
 
 Mỗi kiểu chuyển cảnh dùng 1 lần, đều có SFX; CTA không logo, không chữ "Hoàng Dũng Real Estate" (H-chung-004), không tự điền số điện thoại.
@@ -42,9 +42,9 @@ Mỗi kiểu chuyển cảnh dùng 1 lần, đều có SFX; CTA không logo, kh�
 | T3 | Chip xếp lần lượt | 4 dòng Thiên Khôi C5 | (cột số liệu C2 là đồ họa biểu đồ) | pluck/select cao độ tăng dần |
 | T4 | Gõ chữ | TP. HỒ CHÍ MINH | Câu trích C4 | gõ phím thật |
 | T5 | Bút dạ quang | "Cao thứ 2 giai đoạn 2011–2025" | "GRDP 2025 tăng 8,03%" | tiếng bút dạ kẻ |
-| T6 | Đập nhịp | THIÊN KHÔI GROUP | KHỐI HOÀNG ANH | boom / kick |
+| T6 | Đập nhịp | THIÊN KHÔI GROUP | NÂNG CẤP THÀNH KHỐI | boom / kick |
 | T7 | Con dấu | TOP 5 VARS AWARDS 2026 | – | stamp thump |
-| T8 | Chớp sáng + mặt nạ | Ảnh 16.10.2025 | Tên HOÀNG DŨNG | shutter |
+| T8 | Chớp sáng + mặt nạ | Ảnh 16.10.2025 (biểu đồ C6) | Tên HOÀNG DŨNG | shutter |
 | CTA | Nhịp đập + vòng sóng | NHẮN TIN NGAY | – | chuông thông báo |
 
 Cỡ chữ (H-hieu_ung_3d-002): chữ chính 72 px (6,7% khung), số nhấn tối đa 108 px (10%), chữ phụ 38–42 px; không thẻ/khối nền sau chữ; nền tối → chữ trắng + nhấn vàng, bóng mềm. Chữ nửa trên khung dùng vùng 60–1020 px (cột nút TikTok bên phải chỉ ở nửa dưới); chữ nửa dưới giữ vùng an toàn trái 80 / phải 160 / dưới 420.
@@ -104,6 +104,7 @@ Kiểm bằng máy: tối đa **2 SFX trong mọi cửa sổ 1 giây**; mỗi fi
 | Thiên Khôi Group | thành lập 2020 · 7 chi nhánh · 31 trụ sở · 40.000+ nhà tư vấn, môi giới, nhà đầu tư dùng hệ sinh thái | Thiên Khôi Group công bố, đăng trên [VnEconomy](https://vneconomy.vn/thien-khoi-group-but-pha-vao-top-5-cong-nghe-bat-dong-san.htm) | **số do doanh nghiệp tự công bố** – Dũng đối chiếu với tài liệu nội bộ trước khi đăng |
 | Giải thưởng | TOP 5 đơn vị dẫn đầu phát triển nền tảng công nghệ cho môi giới BĐS & khách hàng – VARS Awards 2026 (TKG Proptech, Thiên Khôi HRM) | [Nhân Dân](https://nhandan.vn/thien-khoi-group-lot-top-5-proptech-2026-voi-he-sinh-thai-cong-nghe-thuc-day-minh-bach-hoa-thi-truong-post974257.html), [Dân Trí](https://dantri.com.vn/kinh-doanh/thien-khoi-group-khang-dinh-dau-an-cong-nghe-tai-vars-awards-2026-20260706152711267.htm), [thienkhoi.com](https://thienkhoi.com/tin-tuc-su-kien/tin-tuc/thien-khoi-group-top-5-don-vi-dan-dau-phat-trien-nen-tang-cong-nghe-cho-moi-gioi-bat-dong-san-va-khach-hang-tai-vars-awards-2026) | |
 | Khối Hoàng Anh | 2024 Phòng Hoàng Anh ra đời · 16.10.2025 tròn 1 tuổi · 2026 nâng cấp thành Khối Hoàng Anh Hồ Chí Minh, Giám đốc Khối Bà Đặng Thu Hương | Dũng cung cấp (tin nhắn + ảnh sự kiện: băng rôn "Mừng sinh nhật Phòng Hoàng Anh tròn 1 tuổi 16.10.2025", màn hình "Chúc mừng Giám đốc Khối – Bà Đặng Thu Hương – Khối Hoàng Anh Hồ Chí Minh") | |
+| Biểu đồ phát triển C6 | cột cao theo **tỷ lệ định tính** (Phòng → Khối), trục dọc chỉ ghi "QUY MÔ ↑", **không có con số** | chưa có số liệu thật | khi Dũng gửi số (vd số thành viên từng mốc) → điền `soLieu={[a, b, c]}` và `donVi` trong `src/ThienKhoiHoangAnh.tsx`: cột tự cao theo số, số chạy hiện trên mỗi cột |
 
 Máy chủ dựng không truy cập trực tiếp được thienkhoi.com (mạng môi trường chặn), nên số liệu Thiên Khôi lấy qua báo chính thống trích từ trang này; tra ngày 26/10/2026.
 

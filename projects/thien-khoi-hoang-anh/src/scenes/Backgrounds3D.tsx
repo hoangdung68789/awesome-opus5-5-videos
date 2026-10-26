@@ -54,7 +54,7 @@ export const NenCotGDP: React.FC<{
         const top = projectPoint([x, 0.24 + bars[i] + 0.15, 0], cam, target, focal, width, height);
         const foot = projectPoint([x, 0.0, 0.9], cam, target, focal, width, height);
         const on = t(frame, riseAt[i] + 4, riseAt[i] + 12, easeOut);
-        const shown = (values[i] * grow[i]).toFixed(2).replace(".", ",");
+        const shown = (grow[i] > 0.97 ? values[i] : values[i] * grow[i]).toFixed(2).replace(".", ",");
         return (
           <div key={years[i]}>
             <div
