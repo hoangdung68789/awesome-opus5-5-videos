@@ -21,15 +21,24 @@ type Props = {
   // Số liệu thật từng mốc (vd số thành viên). Để 0 → không hiện số, cột cao theo tỷ lệ định tính.
   readonly soLieu: readonly [number, number, number];
   readonly donVi: string;
+  // Khối kết quả (Dũng cung cấp): hiện sau mốc 3, thay chỗ ảnh Giám đốc Khối.
+  readonly kq1So: string;
+  readonly kq1Nhan: string;
+  readonly kq2So: string;
+  readonly kq2Nhan: string;
+  readonly kq3So: string;
+  readonly kq3Nhan: string;
   readonly at1: number;
   readonly at2: number;
   readonly at3: number;
+  readonly atKetQua: number;
 };
 
 // C6 – Biểu đồ phát triển Khối Hoàng Anh (2D motion graphics, không 3D).
 // Cột trồi theo từng mốc, đường tăng trưởng vàng vẽ dần nối đỉnh cột, chấm mốc nẩy + sóng,
 // biểu tượng nét (Phòng → 2 căn → cụm tháp "Khối"), ảnh sự kiện thật ở mốc 2 và 3.
-// Mốc 1: ping · Mốc 2: chớp sáng + shutter (T8) · Mốc 3: đập nhịp + kick (T6).
+// Mốc 1: ping · Mốc 2: chớp sáng + shutter (T8) · Mốc 3: đập nhịp + kick (T6)
+// · Kết quả: 3 dòng số bật lần lượt (T3), SFX xu.
 
 const BASE_Y = 1420;
 const XS = [235, 505, 775] as const;
@@ -71,7 +80,7 @@ export const CanhPhatTrienKhoi: React.FC<Props> = (p) => {
   const rise = [0, 1, 2].map((i) => interpolate(frame, [at[i] - 6, at[i] + 8], [0, 1], { ...clamp, easing: OVERSHOOT }));
   const top = [0, 1, 2].map((i) => ({ x: XS[i], y: BASE_Y - H[i] - 34 }));
   const start = { x: 120, y: BASE_Y - 70 };
-  const end = { x: 905, y: top[2].y - 150 };
+  const end = { x: 905, y: top[2].y - 118 };
 
   // đường tăng trưởng: 4 đoạn, mỗi đoạn đến đỉnh cột đúng khung mốc
   const seg = (a: { x: number; y: number }, b: { x: number; y: number }, last: boolean) =>
@@ -105,6 +114,8 @@ export const CanhPhatTrienKhoi: React.FC<Props> = (p) => {
   const ph2 = pop(frame, at[1], 10);
   const ph2out = ease(frame, at[2] - 4, at[2] + 6);
   const ph3 = interpolate(frame, [at[2] + 2, at[2] + 8, at[2] + 12], [0, 1.06, 1], clamp);
+  const ph3out = ease(frame, p.atKetQua - 4, p.atKetQua + 6);
+  const kq = [pop(frame, p.atKetQua, 9), pop(frame, p.atKetQua + 3, 9), pop(frame, p.atKetQua + 20, 9)];
   const flash = interpolate(frame, [at[1] - 1, at[1] + 1, at[1] + 9], [0, 0.85, 0], clamp);
   const burst = ease(frame, at[2], at[2] + 20);
 
@@ -187,8 +198,34 @@ export const CanhPhatTrienKhoi: React.FC<Props> = (p) => {
         <Img src={staticFile(p.anh2)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "#fff8e6", opacity: flash }} />
       </div>
-      <div style={{ position: "absolute", left: 320, top: 568, width: 440, height: 248, rotate: "2deg", scale: String(0.4 + 0.6 * Math.min(ph3, 1.06)), opacity: Math.min(1, ph3 * 1.8), border: "8px solid #fbf6ea", borderRadius: 16, overflow: "hidden", boxShadow: "0 28px 70px rgba(0,0,0,0.65)" }}>
+      <div style={{ position: "absolute", left: 320, top: 568, width: 440, height: 248, rotate: `${2 + ph3out * 14}deg`, translate: `${ph3out * 640}px 0px`, scale: String(0.4 + 0.6 * Math.min(ph3, 1.06)), opacity: Math.min(1, ph3 * 1.8) * (1 - ph3out), border: "8px solid #fbf6ea", borderRadius: 16, overflow: "hidden", boxShadow: "0 28px 70px rgba(0,0,0,0.65)" }}>
         <Img src={staticFile(p.anh3)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      </div>
+
+      {/* khối kết quả: số vàng + nhãn trắng, không thẻ nền */}
+      <div style={{ position: "absolute", left: 60, width: 960, top: 545 }}>
+        {[
+          [p.kq1So, p.kq1Nhan],
+          [p.kq2So, p.kq2Nhan],
+          [p.kq3So, p.kq3Nhan],
+        ].map(([so, nhan], i) => (
+          <div
+            key={nhan}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "baseline",
+              gap: 20,
+              height: 80,
+              opacity: Math.min(1, kq[i] * 1.5),
+              scale: String(0.7 + 0.3 * kq[i]),
+              translate: `0px ${(1 - kq[i]) * 30}px`,
+            }}
+          >
+            <span style={{ fontWeight: 900, fontSize: 76, fontVariantNumeric: "tabular-nums", ...goldGradientText }}>{so}</span>
+            <span style={{ fontWeight: 800, fontSize: SIZE.sub }}>{nhan}</span>
+          </div>
+        ))}
       </div>
 
       {/* biểu đồ */}

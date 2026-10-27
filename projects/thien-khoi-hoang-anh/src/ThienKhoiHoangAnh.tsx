@@ -93,9 +93,16 @@ export const ThienKhoiHoangAnh = () => {
             anh3="assets/khoi-hoang-anh-giam-doc-khoi.jpg"
             soLieu={[0, 0, 0]}
             donVi="thành viên"
+            kq1So="500"
+            kq1Nhan="THÀNH VIÊN"
+            kq2So="100"
+            kq2Nhan="GIAO DỊCH"
+            kq3So="GẦN 1.000 TỶ"
+            kq3Nhan="GIÁ TRỊ"
             at1={22}
-            at2={68}
-            at3={114}
+            at2={53}
+            at3={83}
+            atKetQua={131}
           />
         </TransitionSeries.Sequence>
         <TransitionSeries.Transition presentation={wipe({ direction: "from-bottom" })} timing={linearTiming({ durationInFrames: 12 })} />
@@ -199,8 +206,10 @@ export const ThienKhoiHoangAnh = () => {
         <Audio name="SFX con dấu – VARS" from={554} src={staticFile("sfx/stamp.wav")} volume={0.75} />
         <Audio name="SFX whoosh C5→C6" from={587} src={staticFile("sfx/whoosh_3.wav")} volume={0.5} />
         <Audio name="SFX ping – mốc 2024" from={612} src={staticFile("sfx/ping_node.wav")} volume={0.45} />
-        <Audio name="SFX shutter – ảnh 16.10.2025" from={658} src={staticFile("sfx/shutter_1.wav")} volume={0.5} />
-        <Audio name="SFX kick – KHỐI HOÀNG ANH" from={704} src={staticFile("sfx/kick_slam.wav")} volume={0.7} />
+        <Audio name="SFX shutter – ảnh 16.10.2025" from={643} src={staticFile("sfx/shutter_1.wav")} volume={0.5} />
+        <Audio name="SFX kick – NÂNG CẤP THÀNH KHỐI" from={673} src={staticFile("sfx/kick_slam.wav")} volume={0.7} />
+        <Audio name="SFX xu – 500 thành viên · 100 giao dịch" from={721} src={staticFile("sfx/coins.wav")} volume={0.5} />
+        <Audio name="SFX xu – gần 1.000 tỷ" from={741} src={staticFile("sfx/coins_2.wav")} volume={0.55} />
         <Audio name="SFX whoosh C6→C7" from={758} src={staticFile("sfx/whoosh_4.wav")} volume={0.5} />
         <Audio name="SFX shutter – tên HOÀNG DŨNG" from={778} src={staticFile("sfx/shutter_2.wav")} volume={0.45} />
         <Audio name="SFX pop nhẹ – dòng phụ tác giả" from={790} src={staticFile("sfx/pop_sub.wav")} volume={0.35} />

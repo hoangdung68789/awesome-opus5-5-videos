@@ -28,7 +28,7 @@ Mọi điểm cắt cảnh và chữ chính đặt đúng phách đo được (l
 | C3 TP.HCM | 233–357 | 7,8–11,9 | Bay thấp dọc phố về toà tháp, ghim vàng rơi | "TP. HỒ CHÍ MINH" → vòng **≈ 1/4 GDP cả nước** → "**GRDP 2025 TĂNG 8,03%**" | Fade mềm (0,47 s) + twirl |
 | C4 Lặng | 343–432 | 11,4–14,4 | Dãy nhà phố, căn giữa mọc lên từ mặt đất | *"Thị trường càng lớn, càng cần người dẫn đường giỏi."* (gõ chữ) + riser | Light leak trên điểm cắt (drop) + boom |
 | C5 Thiên Khôi | 432–602 | 14,4–20,1 | Thành phố đêm, dải kính sáng vàng | **THIÊN KHÔI GROUP** (đập nhịp) → 2020 thành lập · 7 chi nhánh · 31 trụ sở · **40.000+** → dấu **TOP 5 VARS AWARDS 2026** | Iris tròn (0,4 s) + whoosh |
-| C6 Khối Hoàng Anh | 590–773 | 19,7–25,8 | **Biểu đồ phát triển 2D (motion graphics, không 3D)**: nền navy chấm vàng; 3 cột trồi đúng mốc, đường tăng trưởng vàng vẽ dần + mũi tên, biểu tượng nét Phòng → 2 căn → cụm tháp "Khối", nhà phố nét vàng tự vẽ ở mốc 2024, ảnh thật ở mốc 2 và 3 | **2024** Phòng Hoàng Anh ra đời → **16.10.2025** Phòng Hoàng Anh tròn 1 tuổi (ảnh) → **2026 NÂNG CẤP THÀNH KHỐI** · Khối Hoàng Anh Hồ Chí Minh · Giám đốc Khối: Bà Đặng Thu Hương (ảnh) | Wipe từ dưới (0,4 s) + whoosh |
+| C6 Khối Hoàng Anh | 590–773 | 19,7–25,8 | **Biểu đồ phát triển 2D (motion graphics, không 3D)**: nền navy chấm vàng; 3 cột trồi đúng mốc, đường tăng trưởng vàng vẽ dần + mũi tên, biểu tượng nét Phòng → 2 căn → cụm tháp "Khối", nhà phố nét vàng tự vẽ ở mốc 2024, ảnh thật ở mốc 2 và 3 | **2024** Phòng Hoàng Anh ra đời (20,4 s) → **16.10.2025** Phòng Hoàng Anh tròn 1 tuổi (21,4 s, ảnh) → **2026 NÂNG CẤP THÀNH KHỐI** · Khối Hoàng Anh Hồ Chí Minh · Giám đốc Khối: Bà Đặng Thu Hương (22,4 s, ảnh) → kết quả **500 THÀNH VIÊN · 100 GIAO DỊCH · GẦN 1.000 TỶ GIÁ TRỊ** (24,0 s) | Wipe từ dưới (0,4 s) + whoosh |
 | C7 Tác giả + CTA | 761–930 | 25,4–31,0 | Dãy nhà phố giờ xanh | Thẻ chân dung **HOÀNG DŨNG** · Môi giới nhà phố TP.HCM · Khối Hoàng Anh – Thiên Khôi Group → "Anh chị cần mua – bán nhà phố TP.HCM?" → **NHẮN TIN NGAY** (đập theo phách) | — |
 
 Mỗi kiểu chuyển cảnh dùng 1 lần, đều có SFX; CTA không logo, không chữ "Hoàng Dũng Real Estate" (H-chung-004), không tự điền số điện thoại.
@@ -39,7 +39,7 @@ Mỗi kiểu chuyển cảnh dùng 1 lần, đều có SFX; CTA không logo, kh�
 |---|---|---|---|---|
 | T1 | Bật từng từ | Hook C1 | Tiêu đề GDP C2 | pop / pop từ khóa |
 | T2 | Số chạy + chốt | 8,02% | 514 tỷ USD | tick lăn + chuông / xu |
-| T3 | Chip xếp lần lượt | 4 dòng Thiên Khôi C5 | (cột số liệu C2 là đồ họa biểu đồ) | pluck/select cao độ tăng dần |
+| T3 | Chip xếp lần lượt | 4 dòng Thiên Khôi C5 | 3 dòng kết quả Khối Hoàng Anh C6 | pluck/select cao độ tăng dần · xu |
 | T4 | Gõ chữ | TP. HỒ CHÍ MINH | Câu trích C4 | gõ phím thật |
 | T5 | Bút dạ quang | "Cao thứ 2 giai đoạn 2011–2025" | "GRDP 2025 tăng 8,03%" | tiếng bút dạ kẻ |
 | T6 | Đập nhịp | THIÊN KHÔI GROUP | NÂNG CẤP THÀNH KHỐI | boom / kick |
@@ -81,15 +81,17 @@ Cỡ chữ (H-hieu_ung_3d-002): chữ chính 72 px (6,7% khung), số nhấn t�
 | 554 | 18.47 | con dấu – VARS | `stamp.wav` | 0.75 | -1.6 dB |
 | 587 | 19.57 | whoosh C5→C6 | `whoosh_3.wav` | 0.5 | -5.1 dB |
 | 612 | 20.40 | ping – mốc 2024 | `ping_node.wav` | 0.45 | -6.0 dB |
-| 658 | 21.93 | shutter – ảnh 16.10.2025 | `shutter_1.wav` | 0.5 | -5.1 dB |
-| 704 | 23.47 | kick – KHỐI HOÀNG ANH | `kick_slam.wav` | 0.7 | -2.2 dB |
+| 643 | 21.43 | shutter – ảnh 16.10.2025 | `shutter_1.wav` | 0.5 | -5.1 dB |
+| 673 | 22.43 | kick – NÂNG CẤP THÀNH KHỐI | `kick_slam.wav` | 0.7 | -2.2 dB |
+| 721 | 24.03 | xu – 500 thành viên · 100 giao dịch | `coins.wav` | 0.5 | -5.1 dB |
+| 741 | 24.70 | xu – gần 1.000 tỷ | `coins_2.wav` | 0.55 | -4.3 dB |
 | 758 | 25.27 | whoosh C6→C7 | `whoosh_4.wav` | 0.5 | -5.1 dB |
 | 778 | 25.93 | shutter – tên HOÀNG DŨNG | `shutter_2.wav` | 0.45 | -6.0 dB |
 | 790 | 26.33 | pop nhẹ – dòng phụ tác giả | `pop_sub.wav` | 0.35 | -8.2 dB |
 | 839 | 27.97 | pop – câu hỏi CTA | `pop_cta.wav` | 0.5 | -5.1 dB |
 | 868 | 28.93 | thông báo – NHẮN TIN NGAY | `notify.wav` | 0.6 | -3.5 dB |
 
-Kiểm bằng máy: tối đa **2 SFX trong mọi cửa sổ 1 giây**; mỗi file dùng tối đa **2 lần** (`tick_roll`, `typing`). Toàn bộ SFX là **CC0** (Kenney, Ben Burnes "BB" packs qua `lavenderdotpet/CC0-Public-Domain-Sounds`), chuẩn 48 kHz WAV, cắt lặng đầu, đỉnh −1 dBFS – xem `public/sfx/sfx_index.csv`. AI chỉ kiểm bằng số đo; **Dũng nghe duyệt** độ hợp tai.
+Kiểm bằng máy: tối đa **2 SFX trong mọi cửa sổ 1 giây**; mỗi file dùng tối đa **2 lần** (`tick_roll`, `typing`). Tổng 37 SFX. Toàn bộ SFX là **CC0** (Kenney, Ben Burnes "BB" packs qua `lavenderdotpet/CC0-Public-Domain-Sounds`), chuẩn 48 kHz WAV, cắt lặng đầu, đỉnh −1 dBFS – xem `public/sfx/sfx_index.csv`. AI chỉ kiểm bằng số đo; **Dũng nghe duyệt** độ hợp tai.
 
 ## 5. Số liệu & nguồn (chỉ đưa lên hình số đã có nguồn)
 
@@ -104,7 +106,8 @@ Kiểm bằng máy: tối đa **2 SFX trong mọi cửa sổ 1 giây**; mỗi fi
 | Thiên Khôi Group | thành lập 2020 · 7 chi nhánh · 31 trụ sở · 40.000+ nhà tư vấn, môi giới, nhà đầu tư dùng hệ sinh thái | Thiên Khôi Group công bố, đăng trên [VnEconomy](https://vneconomy.vn/thien-khoi-group-but-pha-vao-top-5-cong-nghe-bat-dong-san.htm) | **số do doanh nghiệp tự công bố** – Dũng đối chiếu với tài liệu nội bộ trước khi đăng |
 | Giải thưởng | TOP 5 đơn vị dẫn đầu phát triển nền tảng công nghệ cho môi giới BĐS & khách hàng – VARS Awards 2026 (TKG Proptech, Thiên Khôi HRM) | [Nhân Dân](https://nhandan.vn/thien-khoi-group-lot-top-5-proptech-2026-voi-he-sinh-thai-cong-nghe-thuc-day-minh-bach-hoa-thi-truong-post974257.html), [Dân Trí](https://dantri.com.vn/kinh-doanh/thien-khoi-group-khang-dinh-dau-an-cong-nghe-tai-vars-awards-2026-20260706152711267.htm), [thienkhoi.com](https://thienkhoi.com/tin-tuc-su-kien/tin-tuc/thien-khoi-group-top-5-don-vi-dan-dau-phat-trien-nen-tang-cong-nghe-cho-moi-gioi-bat-dong-san-va-khach-hang-tai-vars-awards-2026) | |
 | Khối Hoàng Anh | 2024 Phòng Hoàng Anh ra đời · 16.10.2025 tròn 1 tuổi · 2026 nâng cấp thành Khối Hoàng Anh Hồ Chí Minh, Giám đốc Khối Bà Đặng Thu Hương | Dũng cung cấp (tin nhắn + ảnh sự kiện: băng rôn "Mừng sinh nhật Phòng Hoàng Anh tròn 1 tuổi 16.10.2025", màn hình "Chúc mừng Giám đốc Khối – Bà Đặng Thu Hương – Khối Hoàng Anh Hồ Chí Minh") | |
-| Biểu đồ phát triển C6 | cột cao theo **tỷ lệ định tính** (Phòng → Khối), trục dọc chỉ ghi "QUY MÔ ↑", **không có con số** | chưa có số liệu thật | khi Dũng gửi số (vd số thành viên từng mốc) → điền `soLieu={[a, b, c]}` và `donVi` trong `src/ThienKhoiHoangAnh.tsx`: cột tự cao theo số, số chạy hiện trên mỗi cột |
+| Kết quả Khối Hoàng Anh | 500 thành viên (tăng dần đến 500) · 100 giao dịch · tổng giá trị gần 1.000 tỷ đồng | Dũng cung cấp, 26/10/2026 | hiện ở khối kết quả cuối C6 |
+| Biểu đồ phát triển C6 | cột cao theo **tỷ lệ định tính** (Phòng → Khối), trục dọc chỉ ghi "QUY MÔ ↑", không gắn số cho mốc 2024 / 2025 | chưa có số thành viên từng mốc | khi Dũng gửi số (vd số thành viên từng mốc) → điền `soLieu={[a, b, c]}` và `donVi` trong `src/ThienKhoiHoangAnh.tsx`: cột tự cao theo số, số chạy hiện trên mỗi cột |
 
 Máy chủ dựng không truy cập trực tiếp được thienkhoi.com (mạng môi trường chặn), nên số liệu Thiên Khôi lấy qua báo chính thống trích từ trang này; tra ngày 26/10/2026.
 

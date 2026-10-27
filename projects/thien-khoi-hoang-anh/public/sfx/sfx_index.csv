@@ -13,7 +13,7 @@ twirl_soft,CC blur dissolve,Chuyển cảnh C3→C4,0.90,lavenderdotpet/CC0-Publ
 bar_1,TX chip,Cột 2023,0.11,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/pluck_001.wav,Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
 bar_2,TX chip,Cột 2024 (+2 cung),0.10,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/pluck_001.wav,Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
 bar_3,TX chip,Cột 2025 (+4 cung),0.09,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/pluck_001.wav,Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
-coins,TX tiền,Chốt 514 tỷ USD,0.79,lavenderdotpet/CC0-Public-Domain-Sounds/kenney_rpgaudio/Audio/handleCoins.ogg,Kenney RPG Audio,CC0 1.0,https://kenney.nl/assets/rpg-audio
+coins,TX tiền,"Chốt 514 tỷ USD; 500 thành viên + 100 giao dịch",0.79,lavenderdotpet/CC0-Public-Domain-Sounds/kenney_rpgaudio/Audio/handleCoins.ogg,Kenney RPG Audio,CC0 1.0,https://kenney.nl/assets/rpg-audio
 typing,TX gõ phím,Gõ TP. HỒ CHÍ MINH + câu trích dòng 1,0.75,lavenderdotpet/CC0-Public-Domain-Sounds/bb - Keyboard Sounds (Mar 2021)/Keyboard - Typing 1.wav,bb Keyboard Sounds,CC0 1.0,https://github.com/lavenderdotpet/CC0-Public-Domain-Sounds
 typing_2,TX gõ phím,Gõ câu trích dòng 2,0.90,lavenderdotpet/CC0-Public-Domain-Sounds/bb - Keyboard Sounds (Mar 2021)/Keyboard - Typing 2.wav,bb Keyboard Sounds,CC0 1.0,https://github.com/lavenderdotpet/CC0-Public-Domain-Sounds
 ping_pin,TX ping,Ghim TP.HCM rơi,0.29,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/glass_001.wav,Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
@@ -32,3 +32,4 @@ pop_sub,TX pop nhẹ,Dòng phụ tác giả,0.37,calinou/kenney-interface-sounds
 pop_cta,TX pop,Câu hỏi CTA,0.29,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/drop_004.wav,Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
 notify,TX thông báo,NHẮN TIN NGAY,0.50,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/confirmation_004.wav,Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
 tick_roll,TX số chạy,"Số 8,02% và 514 tỷ USD lăn",1.30,calinou/kenney-interface-sounds/addons/kenney_interface_sounds/tick_001.wav + tick_002.wav (ghép bằng script),Kenney Interface Sounds,CC0 1.0,https://kenney.nl/assets/interface-sounds
+coins_2,TX tiền,Chốt gần 1.000 tỷ,0.29,lavenderdotpet/CC0-Public-Domain-Sounds/kenney_rpgaudio/Audio/handleCoins2.ogg,Kenney RPG Audio,CC0 1.0,https://kenney.nl/assets/rpg-audio
