@@ -8,3 +8,7 @@ public/assets/*
 !public/assets/README.md
 public/audio/*
 !public/audio/README.md
+# Thư mục render: chỉ giữ README + file .bat trên GitHub; video/ảnh xuất ra để trên máy
+render/*
+!render/README.md
+!render/*.bat

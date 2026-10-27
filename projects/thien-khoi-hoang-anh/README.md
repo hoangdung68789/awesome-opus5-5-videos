@@ -32,6 +32,8 @@ Chọn `ThienKhoi-HoangAnh-9x16`. Mỗi lớp chữ là một clip riêng trên 
 
 ## 3. Xuất video
 
+Cách nhanh nhất: bấm đúp các file trong thư mục [`render/`](render/) (`2-xem-truoc-720p.bat`, `3-xuat-ban-cuoi-H265.bat`). Lệnh tương đương bên dưới.
+
 Máy có card đồ hoạ render 3D nhanh hơn nhiều so với máy chủ (thêm `--gl=angle`).
 
 ```powershell
