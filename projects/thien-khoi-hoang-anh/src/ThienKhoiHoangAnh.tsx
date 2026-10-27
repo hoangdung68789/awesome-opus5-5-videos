@@ -47,7 +47,9 @@ const LightLeakOverlay: React.FC<{ readonly seed: number; readonly hueShift: num
   );
 };
 
-export const ThienKhoiHoangAnh = () => {
+// `coAmThanh = false` khi render hình theo đoạn trên máy không GPU: bỏ nhạc/SFX để trình duyệt
+// không bị quá thời gian đọc file âm thanh; âm thanh render riêng một lần rồi ghép.
+export const ThienKhoiHoangAnh: React.FC<{ readonly coAmThanh?: boolean }> = ({ coAmThanh = true }) => {
   const frame = useCurrentFrame();
 
   return (
@@ -169,53 +171,57 @@ export const ThienKhoiHoangAnh = () => {
         <MGCta name="MG CTA Nhắn tin ngay" from={837} durationInFrames={93} photo="assets/hoang-dung-chan-dung.jpg" hoTen="Hoàng Dũng · Khối Hoàng Anh" question1="Anh chị cần mua – bán" question2="nhà phố TP.HCM?" cta="NHẮN TIN NGAY" ctaAt={31} beatFrames={15.3} />
       </Track>
 
-      <Track name="Nhạc">
-        <Audio
-          name="Nhạc nền TikTok (Dũng gửi)"
-          src={staticFile("audio/nhac-nen-tiktok.mp3")}
-          volume={interpolate(frame, [0, 2, 918, 930], [0, 0.9, 0.9, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}
-        />
-      </Track>
+      {coAmThanh ? (
+        <>
+          <Track name="Nhạc">
+            <Audio
+              name="Nhạc nền TikTok (Dũng gửi)"
+              src={staticFile("audio/nhac-nen-tiktok.mp3")}
+              volume={interpolate(frame, [0, 2, 918, 930], [0, 0.9, 0.9, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })}
+            />
+          </Track>
 
-      <Track name="SFX">
-        <Audio name="SFX pop – hook dòng 1" from={0} src={staticFile("sfx/pop_hook_1.wav")} volume={0.55} />
-        <Audio name="SFX pop – hook từ khóa" from={22} src={staticFile("sfx/pop_hook_2.wav")} volume={0.6} />
-        <Audio name="SFX tick lăn số 8,02%" from={52} src={staticFile("sfx/tick_roll.wav")} volume={0.4} />
-        <Audio name="SFX chuông chốt 8,02%" from={83} src={staticFile("sfx/lock_bell.wav")} volume={0.5} />
-        <Audio name="SFX bút dạ – cao thứ 2" from={88} src={staticFile("sfx/marker_1.wav")} volume={0.45} />
-        <Audio name="SFX whoosh C1→C2" from={113} src={staticFile("sfx/whoosh_1.wav")} volume={0.5} />
-        <Audio name="SFX pluck – cột 2023" from={129} src={staticFile("sfx/bar_1.wav")} volume={0.45} />
-        <Audio name="SFX pluck – cột 2024" from={145} src={staticFile("sfx/bar_2.wav")} volume={0.45} />
-        <Audio name="SFX pluck – cột 2025" from={169} src={staticFile("sfx/bar_3.wav")} volume={0.5} />
-        <Audio name="SFX tick lăn số 514" from={192} src={staticFile("sfx/tick_roll.wav")} volume={0.35} trimAfter={16} />
-        <Audio name="SFX xu – chốt 514 tỷ USD" from={207} src={staticFile("sfx/coins.wav")} volume={0.5} />
-        <Audio name="SFX whoosh C2→C3" from={230} src={staticFile("sfx/whoosh_2.wav")} volume={0.5} />
-        <Audio name="SFX gõ phím – TP.HCM" from={239} src={staticFile("sfx/typing.wav")} volume={0.4} />
-        <Audio name="SFX ping – ghim rơi" from={262} src={staticFile("sfx/ping_pin.wav")} volume={0.45} />
-        <Audio name="SFX swish – vòng 1/4" from={270} src={staticFile("sfx/swish_soft.wav")} volume={0.4} />
-        <Audio name="SFX bút dạ – GRDP" from={319} src={staticFile("sfx/marker_2.wav")} volume={0.45} />
-        <Audio name="SFX twirl – C3→C4" from={341} src={staticFile("sfx/twirl_soft.wav")} volume={0.4} />
-        <Audio name="SFX gõ phím – câu trích 1" from={352} src={staticFile("sfx/typing.wav")} volume={0.35} />
-        <Audio name="SFX gõ phím – câu trích 2" from={384} src={staticFile("sfx/typing_2.wav")} volume={0.3} trimAfter={27} />
-        <Audio name="SFX riser trước drop" from={386} src={staticFile("sfx/riser.wav")} trimBefore={60} volume={0.55} />
-        <Audio name="SFX boom – drop THIÊN KHÔI" from={432} src={staticFile("sfx/boom.wav")} volume={0.85} />
-        <Audio name="SFX chip 1 – 2020" from={470} src={staticFile("sfx/chip_1.wav")} volume={0.45} />
-        <Audio name="SFX chip 2 – 7 chi nhánh" from={488} src={staticFile("sfx/chip_2.wav")} volume={0.45} />
-        <Audio name="SFX chip 3 – 31 trụ sở" from={503} src={staticFile("sfx/chip_3.wav")} volume={0.45} />
-        <Audio name="SFX chip 4 – 40.000+" from={518} src={staticFile("sfx/chip_4.wav")} volume={0.5} />
-        <Audio name="SFX con dấu – VARS" from={554} src={staticFile("sfx/stamp.wav")} volume={0.75} />
-        <Audio name="SFX whoosh C5→C6" from={587} src={staticFile("sfx/whoosh_3.wav")} volume={0.5} />
-        <Audio name="SFX ping – mốc 2024" from={612} src={staticFile("sfx/ping_node.wav")} volume={0.45} />
-        <Audio name="SFX shutter – ảnh 16.10.2025" from={643} src={staticFile("sfx/shutter_1.wav")} volume={0.5} />
-        <Audio name="SFX kick – NÂNG CẤP THÀNH KHỐI" from={673} src={staticFile("sfx/kick_slam.wav")} volume={0.7} />
-        <Audio name="SFX xu – 500 thành viên · 100 giao dịch" from={721} src={staticFile("sfx/coins.wav")} volume={0.5} />
-        <Audio name="SFX xu – gần 1.000 tỷ" from={741} src={staticFile("sfx/coins_2.wav")} volume={0.55} />
-        <Audio name="SFX whoosh C6→C7" from={758} src={staticFile("sfx/whoosh_4.wav")} volume={0.5} />
-        <Audio name="SFX shutter – tên HOÀNG DŨNG" from={778} src={staticFile("sfx/shutter_2.wav")} volume={0.45} />
-        <Audio name="SFX pop nhẹ – dòng phụ tác giả" from={790} src={staticFile("sfx/pop_sub.wav")} volume={0.35} />
-        <Audio name="SFX pop – câu hỏi CTA" from={839} src={staticFile("sfx/pop_cta.wav")} volume={0.5} />
-        <Audio name="SFX thông báo – NHẮN TIN NGAY" from={868} src={staticFile("sfx/notify.wav")} volume={0.6} />
-      </Track>
+          <Track name="SFX">
+            <Audio name="SFX pop – hook dòng 1" from={0} src={staticFile("sfx/pop_hook_1.wav")} volume={0.55} />
+            <Audio name="SFX pop – hook từ khóa" from={22} src={staticFile("sfx/pop_hook_2.wav")} volume={0.6} />
+            <Audio name="SFX tick lăn số 8,02%" from={52} src={staticFile("sfx/tick_roll.wav")} volume={0.4} />
+            <Audio name="SFX chuông chốt 8,02%" from={83} src={staticFile("sfx/lock_bell.wav")} volume={0.5} />
+            <Audio name="SFX bút dạ – cao thứ 2" from={88} src={staticFile("sfx/marker_1.wav")} volume={0.45} />
+            <Audio name="SFX whoosh C1→C2" from={113} src={staticFile("sfx/whoosh_1.wav")} volume={0.5} />
+            <Audio name="SFX pluck – cột 2023" from={129} src={staticFile("sfx/bar_1.wav")} volume={0.45} />
+            <Audio name="SFX pluck – cột 2024" from={145} src={staticFile("sfx/bar_2.wav")} volume={0.45} />
+            <Audio name="SFX pluck – cột 2025" from={169} src={staticFile("sfx/bar_3.wav")} volume={0.5} />
+            <Audio name="SFX tick lăn số 514" from={192} src={staticFile("sfx/tick_roll.wav")} volume={0.35} trimAfter={16} />
+            <Audio name="SFX xu – chốt 514 tỷ USD" from={207} src={staticFile("sfx/coins.wav")} volume={0.5} />
+            <Audio name="SFX whoosh C2→C3" from={230} src={staticFile("sfx/whoosh_2.wav")} volume={0.5} />
+            <Audio name="SFX gõ phím – TP.HCM" from={239} src={staticFile("sfx/typing.wav")} volume={0.4} />
+            <Audio name="SFX ping – ghim rơi" from={262} src={staticFile("sfx/ping_pin.wav")} volume={0.45} />
+            <Audio name="SFX swish – vòng 1/4" from={270} src={staticFile("sfx/swish_soft.wav")} volume={0.4} />
+            <Audio name="SFX bút dạ – GRDP" from={319} src={staticFile("sfx/marker_2.wav")} volume={0.45} />
+            <Audio name="SFX twirl – C3→C4" from={341} src={staticFile("sfx/twirl_soft.wav")} volume={0.4} />
+            <Audio name="SFX gõ phím – câu trích 1" from={352} src={staticFile("sfx/typing.wav")} volume={0.35} />
+            <Audio name="SFX gõ phím – câu trích 2" from={384} src={staticFile("sfx/typing_2.wav")} volume={0.3} trimAfter={27} />
+            <Audio name="SFX riser trước drop" from={386} src={staticFile("sfx/riser.wav")} trimBefore={60} volume={0.55} />
+            <Audio name="SFX boom – drop THIÊN KHÔI" from={432} src={staticFile("sfx/boom.wav")} volume={0.85} />
+            <Audio name="SFX chip 1 – 2020" from={470} src={staticFile("sfx/chip_1.wav")} volume={0.45} />
+            <Audio name="SFX chip 2 – 7 chi nhánh" from={488} src={staticFile("sfx/chip_2.wav")} volume={0.45} />
+            <Audio name="SFX chip 3 – 31 trụ sở" from={503} src={staticFile("sfx/chip_3.wav")} volume={0.45} />
+            <Audio name="SFX chip 4 – 40.000+" from={518} src={staticFile("sfx/chip_4.wav")} volume={0.5} />
+            <Audio name="SFX con dấu – VARS" from={554} src={staticFile("sfx/stamp.wav")} volume={0.75} />
+            <Audio name="SFX whoosh C5→C6" from={587} src={staticFile("sfx/whoosh_3.wav")} volume={0.5} />
+            <Audio name="SFX ping – mốc 2024" from={612} src={staticFile("sfx/ping_node.wav")} volume={0.45} />
+            <Audio name="SFX shutter – ảnh 16.10.2025" from={643} src={staticFile("sfx/shutter_1.wav")} volume={0.5} />
+            <Audio name="SFX kick – NÂNG CẤP THÀNH KHỐI" from={673} src={staticFile("sfx/kick_slam.wav")} volume={0.7} />
+            <Audio name="SFX xu – 500 thành viên · 100 giao dịch" from={721} src={staticFile("sfx/coins.wav")} volume={0.5} />
+            <Audio name="SFX xu – gần 1.000 tỷ" from={741} src={staticFile("sfx/coins_2.wav")} volume={0.55} />
+            <Audio name="SFX whoosh C6→C7" from={758} src={staticFile("sfx/whoosh_4.wav")} volume={0.5} />
+            <Audio name="SFX shutter – tên HOÀNG DŨNG" from={778} src={staticFile("sfx/shutter_2.wav")} volume={0.45} />
+            <Audio name="SFX pop nhẹ – dòng phụ tác giả" from={790} src={staticFile("sfx/pop_sub.wav")} volume={0.35} />
+            <Audio name="SFX pop – câu hỏi CTA" from={839} src={staticFile("sfx/pop_cta.wav")} volume={0.5} />
+            <Audio name="SFX thông báo – NHẮN TIN NGAY" from={868} src={staticFile("sfx/notify.wav")} volume={0.6} />
+          </Track>
+        </>
+      ) : null}
     </>
   );
 };
